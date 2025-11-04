@@ -1,22 +1,14 @@
-#T0D0-1 - Randomly choose a word from the word_list and assign it to a variable called chosen_word.
-#T0D0-2 - Ask the user to guess a letter and assign their answer to a variable called guess. Make guess lowercase.
-#T0D0-3 - Check if the letter the user guessed (guess) is one of the letters in the chosen_word
-#T0D0-4 - If it is, print "Right!" and if it isn't, print "Wrong!".
 import random
-word_list = ["aardvark","baboon","camel"]
+word_list=["aardvark","baboon","camel"]
+# TOD0 - 1 - Randomly choose a word from the word_list and assign it to a variable called_chosen word then print it. 
 chosen_word = random.choice(word_list)
-print(f"chosen_word is: {chosen_word}") # Debugging line
-palceholder = ""
-word_length = len(chosen_word)
-for position in range(word_length):
-    palceholder += "_"
-print(palceholder)
+print(chosen_word)
+# TOD0 - 2 - Ask the user to guess the letter and assign their answer to variable called guess. Make sure lowercase.
 guess = input("Guess a letter: ").lower()
-display = ""
+print(guess)
+# TOD0 - 3 - Check if the letter the user guessed (guess) is one of the letters in the chosen_words. Print "Right" if it is, "Wrong" if it's not.
 for letter in chosen_word:
     if letter == guess:
-        display += letter
+        print("Right")
     else:
-        display += "_"
-
-print(display)
+        print("Wrong")
